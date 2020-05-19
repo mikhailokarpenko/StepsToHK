@@ -15,21 +15,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaG-KG-ydr">
+                                <rect key="frame" x="207" y="388" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCF-n9-UYo">
-                                <rect key="frame" x="184" y="438" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="192" y="438" width="30" height="30"/>
+                                <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tf4-Yz-rVR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total count:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMk-Sl-QK3">
+                                <rect key="frame" x="162" y="524" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZMk-Sl-QK3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hzt-aV-Ibk"/>
+                            <constraint firstItem="aaG-KG-ydr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MGg-RI-KZo"/>
+                            <constraint firstItem="OCF-n9-UYo" firstAttribute="top" secondItem="aaG-KG-ydr" secondAttribute="bottom" constant="50" id="WYv-cP-uea"/>
                             <constraint firstItem="OCF-n9-UYo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="cjd-Mv-UGa"/>
                             <constraint firstItem="OCF-n9-UYo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hTZ-44-XL6"/>
+                            <constraint firstItem="ZMk-Sl-QK3" firstAttribute="top" secondItem="OCF-n9-UYo" secondAttribute="bottom" constant="56" id="qjR-tS-8U4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="aaG-KG-ydr" id="6j5-qh-Cpb"/>
+                        <outlet property="totalCountLabel" destination="ZMk-Sl-QK3" id="mOs-c5-9M1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
